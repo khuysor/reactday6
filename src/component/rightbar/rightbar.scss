@@ -1,0 +1,107 @@
+@import '../../style.scss';
+.rightbar {
+    @include themify($themes){
+    flex: 1;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 50px);
+    padding: 0 20px;
+    background-color: themed('bg');
+    
+    .container {
+        a {
+            text-decoration: none;
+            color: black;
+
+            .item {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                border-radius: 5px;
+                padding: 10px;
+                align-items: center;
+                gap: 10px;
+               
+                .boximg {
+                    flex: 1;
+                    height: 100%;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+                }
+                span{
+                    color:themed('textColor')
+                }
+                p{
+                    color:themed('textColor')
+                }
+            }
+
+            .item:hover {
+                background-color: themed('bgSoft');
+            }
+
+        }
+
+        hr {
+            margin-top: 10px;
+        }
+
+        .contact {
+            .head {
+                width: 100%;
+                height: 50px;
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    color: themed('textColor');
+                }
+
+                div {
+                    display: flex;
+                    gap: 10px;
+
+                    svg {
+                        cursor: pointer;
+                        color:themed('textColor');
+                    }
+                }
+            }
+
+            .info {
+                width: 100%;
+
+                .item {
+                    height: 55px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 0 10px;
+                    img{
+                        width: 50px;
+                        height: 80%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+                    
+                }
+                span{
+                    color:themed('textColor')
+                }
+
+                .item:hover{
+                    background-color:themed('bgSoft');
+                }
+            }
+        }
+    }
+}
+}

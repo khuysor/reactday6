@@ -1,0 +1,12 @@
+@import '../../style.scss';
+.centerbar{
+    @include themify($themes){
+    flex: 2;
+    overflow: hidden;
+    background-color: themed('bgSoft');
+    .container{
+        width: 100%; 
+        overflow-y: scroll;
+    }
+}
+}

@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+$themes: (
+  light: (bg:white,
+    textColor: #000,
+    logo:darkblue,
+    bgSoft:#f6f3f3,
+    textColorSoft:#555,
+    border:lightgray,
+    home:#000),
+  dark:(bg:#222,
+    textColor:whitesmoke,
+    logo:white,
+    bgSoft:#333,
+    // bgSoft:black,
+    textColorSoft:lightgray,
+    border:#444,
+    home:whitesmoke)
+);
+
+@mixin themify($themes) {
+
+  @each $theme,
+  $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key,
+      $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge($theme-map,
+          ($key: $value,
+          )) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin xs {
+  @media (max-width:599.5px) {
+    @content
+  }
+}
+
+;
+
+@mixin sm {
+  @media (min-width:599.5px) and (max-width:767.5px) {
+    @content
+  }
+}
+
+;
+
+@mixin md {
+  @media (min-width:768px) and (max-width:991.5px) {
+    @content
+  }
+}
+
+;
+
+@mixin lg {
+  @media (max-width:992px) {
+    @content
+  }
+}
+
+;
+
+@mixin xl {
+  @media (max-width:1200px) {
+    @content
+  }
+}

@@ -1,0 +1,10 @@
+@import '../../style.scss';
+.content{
+    @include themify($themes){
+    position: relative;
+    top: 80px;
+    display: flex;
+    gap: 10px;
+    background-color: themed('bgSoft');
+    }
+}

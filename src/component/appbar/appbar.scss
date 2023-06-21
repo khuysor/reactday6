@@ -1,0 +1,258 @@
+@import '../../style.scss';
+
+.appbar {
+    @include themify($themes) {
+        height: 70px;
+        width: 100%;
+        z-index: 12;
+        position: fixed;
+        background-color: themed('bg');
+        @include xs {
+            height: 50px;
+
+        }
+
+        @include sm {
+            height: 53px;
+        }
+
+        @include md {
+            height: 56px;
+
+        }
+
+        header {
+            height: 100%;
+            display: flex;
+            width: 100%;
+            padding: 10px;
+
+            @include xs {
+                padding: 0 5px;
+            }
+
+            @include sm {
+                padding: 0 7px;
+            }
+
+            @include md {
+                padding: 0 9px;
+
+            }
+
+            .left {
+                flex: 1;
+                height: 100%;
+
+                .item {
+                    display: flex;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    @include xs {
+                        justify-content: space-between;
+
+                    }
+
+                    @include sm {
+                        justify-content: space-around;
+                    }
+
+                    @include md {
+                        justify-content: center;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        border-radius: 50%;
+
+                        @include xs {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        @include sm {
+                            width: 43px;
+                            height: 43px;
+                        }
+                    }
+
+                    .search {
+                        width: 300px;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+
+                        @include xs {
+                            width: 100px;
+                        }
+
+                        @include sm {
+                            width: 150px;
+                        }
+
+                        @include md {
+                            width: 200px;
+
+                        }
+
+                        input {
+                            width: 50%;
+                            height: 50px;
+                            border: none;
+                            border-radius: unset;
+                            border-top-left-radius: 15px;
+                            border-bottom-left-radius: 15px;
+                            transition: 2s width;
+                            background-color: transparent;
+                            border: 1px themed('border') solid;
+                            text-align: center;
+
+                            @include xs {
+                                width: 0;
+                                height: 30px;
+                                border: none;
+                            }
+
+                            @include sm {
+                                width: 85%;
+                                height: 35px;
+                            }
+
+                            @include md {
+                                height: 40px;
+                            }
+                        }
+
+                        input:focus {
+                            border: none;
+                            width: 85%;
+                            outline: none;
+                            border: 1px themed('border') solid;
+
+                            @include md {
+                                width: 70%;
+                            }
+
+                        }
+
+                        input.active {
+                            @include xs {
+                                width: 60px;
+                                border: 1px themed('border')solid;
+                            }
+
+                        }
+
+                        button {
+                            height: 50px;
+                            width: 60px;
+                            border: 1px themed('border') solid;
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            background-color: themed("bg");
+
+                            @include xs {
+                                width: 40px;
+                                height: 30px;
+                            }
+
+                            @include sm {
+                                width: 35px;
+                                height: 35px;
+                            }
+
+                            @include md {
+                                height: 40px;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .center {
+                flex: 1;
+                height: 100%;
+                display: flex;
+
+                .item {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    @include xs {
+                        justify-content: end;
+                    }
+
+                    @include sm {
+                        gap: 7px;
+                    }
+
+                    svg {
+                        cursor: pointer;
+                        color: themed('home');
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+                height: 100%;
+                display: flex;
+
+                .item {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: end;
+                    gap: 20px;
+
+                    @include xs {
+                        gap: 5px;
+                    }
+
+                   
+                    
+
+                    svg {
+                        border-radius: 50%;
+                        width: 1.2em;
+                        height: 1.5em;
+                        color: themed('home');
+
+                        @include xs {
+                            width: 1em;
+                            height: 1 em;
+                        }
+
+                        @include sm {
+                            width: 1.1em;
+                            height: 1.1em;
+                        }
+
+                        // @include md {
+                        //     width: 1.2em;
+                        //     height: 1.2em;
+                        // }
+                    }
+
+                    svg:hover{
+                        background-color: themed('bgSoft');
+                    }
+
+
+                }
+            }
+        }
+
+    }
+}
