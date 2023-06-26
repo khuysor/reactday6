@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+body{
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
 
 $themes: (
   light: (bg:white,
@@ -19,7 +24,10 @@ $themes: (
     // bgSoft:black,
     textColorSoft:lightgray,
     border:#444,
-    home:whitesmoke)
+    home:whitesmoke,
+    btn:red,
+    )
+   
 );
 
 @mixin themify($themes) {
@@ -72,7 +80,7 @@ $themes: (
 ;
 
 @mixin lg {
-  @media (max-width:992px) {
+  @media (min-width:992px) and (max-width:1199.5px)  {
     @content
   }
 }
@@ -80,7 +88,7 @@ $themes: (
 ;
 
 @mixin xl {
-  @media (max-width:1200px) {
+  @media (min-width:1200px) and (max-width:1330px) {
     @content
   }
 }

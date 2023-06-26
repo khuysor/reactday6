@@ -1,50 +1,132 @@
 @import '../../style.scss';
+
 .sidebar {
     @include themify($themes){
-
-    background-color: themed('bg');
-    flex: 1;
-    position: sticky;
+    width: 350px;
+    background-color:themed('bg');
+    // background-color: themed('bgSoft');
     position: sticky;
     top: 50px;
     height: calc(100vh - 50px);
 
+    @include xs {
+        width: 100px;
+   
+
+    }
+    @include sm{
+        width: 150px;
+     
+    }
+    @include md{
+        width: 200px;
+        
+    }
+    @include lg{
+        width: 250px;
+      
+    }
+    @include xl{
+        width: 300px;
+   
+    }
     .container {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        .User{
+            height: 90px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 20px;
+            @include sm{
+                padding: 0 10px;
+                gap: 10px;
+            }
+            @include xs{
+                padding: 0 5px;
+                gap: 10px;
+                height: 50px;
+            }
 
+            span{
+                font-size: 15px;
+                color: themed('textColor');
+                @include xs{
+                    font-size: 10px;
+                }
+            }
+            img{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    @include sm{
+                      width: 40px;
+                      height: 40px;
+                    }
+                    @include xs{
+                        width: 30px;
+                        height: 30px;
+                      }
+
+            }
+        }
         .item {
-            width: 90%;
-
+            width: 100%;
+            background-color:themed('bg');
+            margin-top: 20px;
+            padding: 10px 0; 
             ul {
                 width: 100%;
-                list-style: none;
-                padding: 0 5px;
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                flex-direction: column;
 
                 li {
-                    width: 100%;
-                    margin: 10px 0;
-                    padding: 10px;
-                    border-radius: 5px;
+                    width: 90%;
+                    padding: 20px 20px;
+                    border-radius: 10px;
+                    @include sm{
+                     padding: 15px 10px;
+                    }
+                    @include xs{
+                        padding: 10px 5px;
+                    }
 
                     a {
                         text-decoration: none;
+                        text-align: center;
                         display: flex;
                         align-items: center;
                         gap: 10px;
-                        color:themed('textColor');
-
-                        img {
-                            width: 40px;
-                            height: 100%;
-                            object-fit: contain;
-                            padding: 5px;
-                            border-radius: 50%;
+                       
+                            @include xs{
+                                gap: 5px;
+                            }
+                            @include sm{
+                                gap: 7px;
+                            }
+                            svg{
+                                color: themed('textColor');
+                            }
+                        
+                        span {
+                            color: themed('textColor');
+                            font-size: 15px;
+                            @include xs{
+                                font-size: 10px;
+                            }
                         }
+
                     }
                 }
 
                 li:hover {
-                    background-color: rgba(211, 211, 211, 0.393);
+                    background-color:themed('bgSoft');
                 }
             }
         }

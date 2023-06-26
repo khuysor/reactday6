@@ -15,7 +15,7 @@ function Rightbar() {
             </div>
             <div className="info">
               <span>Zinvo Blade Spirit</span>
-              <p>https://web.facebook.com/</p>
+              <p>web.facebook.com/</p>
             </div>
           </div>
         </a>
@@ -26,7 +26,7 @@ function Rightbar() {
             </div>
             <div className="info">
               <span>Zinvo Blade Spirit</span>
-              <p>https://web.facebook.com/</p>
+              <p>web.facebook.com/</p>
             </div>
           </div>
         </a>

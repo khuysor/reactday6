@@ -15,74 +15,73 @@ function Sidebar() {
   return (
     <div className='sidebar'>
       <div className="container">
+        <div className="User">
+            <img src={user} alt="" />
+            <span>User Name</span>
+          
+        </div>
         <div className="item">
           <ul>
             <li>
               <a href="">
-                <img src={user} alt="" />
-                <span>User name</span>
+                <GroupIcon />
+                <span>Friends</span>
               </a>
             </li>
             <li>
               <a href="">
-                <GroupIcon/>
-                <span>Friends</span>
+                <BookmarkIcon />
+                <span>Save</span>
               </a>
-              </li>
+            </li>
             <li>
               <a href="">
-              <BookmarkIcon/>
-              <span>Save</span>
-              </a>
-              </li>
-            <li>
-              <a href="">
-                <FeedIcon/>
+                <FeedIcon />
                 <span>Feeds</span>
               </a>
-              </li>
+            </li>
             <li>
               <a href="">
-                <Diversity3Icon/>
+                <Diversity3Icon />
                 <span>Groups</span>
               </a>
-              </li>
+            </li>
             <li>
               <a href="">
-                <StorefrontIcon/>
+                <StorefrontIcon />
                 <span>Marketplace</span>
               </a>
-              </li>
-              <li>
-                <a href="">
-                  <VideoLibraryIcon/>
-                  <span>Watch</span>
-                </a>
-                </li>
-              <li>
-                <a href="">
-                  <HistoryToggleOffIcon/>
-                  <span>Memorie</span>
-                </a>
-                </li>
-              <li>
-                <a href="">
-                  <Flag/>
-                  <span>Pages</span>
-                </a>
-                </li>
-              <li>
-                <a href="">
-                  <CalendarMonthIcon/>
-                  <span>Events</span>
-                </a>
-                </li>
-              <li>
-                <a href="">
-                  <EqualizerIcon/>
-                  <span>Ads Manager</span>
-                </a>
-                </li>
+            </li>
+            <li>
+              <a href="">
+                <VideoLibraryIcon />
+                <span>Watch</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <HistoryToggleOffIcon />
+                <span>Memorie</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <Flag />
+                <span>Pages</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <CalendarMonthIcon />
+                <span>Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <EqualizerIcon />
+                <span>Ads Manager</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
